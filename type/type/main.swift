@@ -29,6 +29,7 @@ class Baseball {
     }
     
     func inputUserValue() {
+        //print(terminator:" ")
         if let inputUserValueInt = readLine() {
             unwrapiing = inputUserValueInt
             if let inputUserValueString = Int(unwrapiing) {
@@ -42,10 +43,12 @@ class Baseball {
             userValueArray.append(userValue)
         }
     }
+    
+    func startGame() {}
     //유저 값과
 }
-        
-        
+
+Baseball().inputUserValue()
         
         
             
