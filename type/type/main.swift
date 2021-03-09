@@ -10,11 +10,11 @@
 //배열로 짜본다
 
 class Baseball {
-    var randomValue = 0
-    var randomArray = [Int]()
-    var computerValue = 0
-    var userValue = 0
-    var unwrapiing = ""
+    private var randomValue = 0
+    private var randomArray = [Int]()
+    private var computerValue = 0
+    private var userValue = 0
+    private var unwraping = ""
     var userValueArray = [Int]()
    //랜덤한 숫자를 3개 만들어서 배열의 숫자가 3개가 될떄까지 추가
     func randomNumber() {
@@ -22,14 +22,15 @@ class Baseball {
     }
     
     func inputRandomComputerNumber() {
-        while randomArray.count < 4 {
+        while randomArray.count < 3 {
             randomNumber()
             randomArray.append(randomValue)
         }
     }
     
     func inputUserValue() {
-        //print(terminator:" ")
+        print("입력값: ", separator: "...", terminator: "")
+        //세퍼레이터 ?
         if let inputUserValueInt = readLine() {
             unwrapiing = inputUserValueInt
             if let inputUserValueString = Int(unwrapiing) {
@@ -39,16 +40,24 @@ class Baseball {
     }
     
     func makeUserValueArray() {
-        while userValueArray.count < 4 {
+        while userValueArray.count < 3 {
             userValueArray.append(userValue)
+            
         }
+        print(userValueArray)
     }
     
-    func startGame() {}
+    func startGame() {
+        
+        inputUserValue()
+        makeUserValueArray()
+    }
     //유저 값과
 }
 
-Baseball().inputUserValue()
+Baseball().startGame()
+
+
         
         
             
