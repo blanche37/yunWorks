@@ -16,7 +16,6 @@ class Baseball {
     private var userValue = 0
     private var unwraping = ""
     var userValueArray = [Int]()
-   //랜덤한 숫자를 3개 만들어서 배열의 숫자가 3개가 될떄까지 추가
     func randomNumber() {
         randomValue = Int.random(in: 0...9)
     }
@@ -52,7 +51,6 @@ class Baseball {
         inputUserValue()
         makeUserValueArray()
     }
-    //유저 값과
 }
 
 Baseball().startGame()
